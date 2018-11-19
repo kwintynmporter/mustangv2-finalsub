@@ -88,9 +88,29 @@ function remove() {
 }
 
 // I'm not sure what we're supposed to do with this. 
-//function zipBlurFunction() {
-//    getPlace();
-//}
+function zipBlurFunction() {
+    getPlace();
+    var input = document.getElementById("zipID");
+    var awesomplete = new Awesomplete(input, {
+      minChars: 1,
+      autoFirst: true
+    });
+    
+    $("input").on("keyup", function(){
+      $.ajax({
+        url: 'https://mustang-index.azurewebsites.net/index.json' + this.value,
+        type: 'GET',
+        dataType: 'json'
+      })
+      .success(function(data) {
+        var list = [];
+        $.each(data, function(key, value) {
+          list.push(value.name);
+        });
+        awesomplete.list = list;
+      });
+    });
+}
 
 function keyPressed() {
     console.log('keyPressed()');

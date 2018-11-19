@@ -2,17 +2,18 @@
 <!doctype html>
 <html lang="en">
 <!--
-    Author:  Eric Pogue
+    Author:  Kwintyn Porter
     Class:   Web & Distributed Programming 
-    Project: Mustang v2 Lite
-    Session: su18-cpsc-24700-lt1
-    Description: This application is intended to be a reference implementatin for Mustang V2.
+    Project: Mustang v2 
+    Assignment: PA6 
 -->
     <head>
         <meta charset="UTF-8">
         <title>Mustang v2 </title>
         <link rel="stylesheet" href="sunday-style.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> 
+        <link rel="stylesheet" href="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awsomplete.css"> 
+        <script src="https://cdn.rawgit.com/LeaVerou/awesomplete/gh-pages/awesomplete.min.js"></script> 
         <script src="sunday-mustjav.js"></script>
     </head>
     <body onload="initApplication()">
@@ -43,9 +44,9 @@
                 </td>
             </tr>
             <tr>
-                <td> <h2> Zip</h2></td>
+                <td> <h2> Zip &#8594 </h2></td>
                 <td>
-                    <input id="zipID" type="text" value="" size="20" onfocus="zipFocusFunction()" onblur="zipBlurFunction()">
+                    <input id="zipID" placeholder="ENTER ZIP FIRST" type="text" value="" size="20" onfocus="zipFocusFunction()" onblur="zipBlurFunction()">
                 </td>
             </tr>
             <tr>
